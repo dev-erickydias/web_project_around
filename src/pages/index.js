@@ -1,3 +1,4 @@
+import './index.css';
 // array com os cards que serão adicionados a ul7
 import { initialCards } from "./initialCards.js"
 
@@ -8,7 +9,8 @@ import FormValidator from "./FormValidator.js";
 import Card from "./Card.js";
 import { fecharComEsc } from './utils.js';
 import { abrirPopup } from './utils.js';
-
+import  unlikeImage from "../image/unlike.png"
+import  likedImage from "../image/liked.png"
 
 //Parte de fazer o pupup abrir, alem de fazer tudo o que for editado ficar na tela.
 
@@ -136,10 +138,10 @@ function lickImage(event) {
     const isLiked = cardUnlick.getAttribute("data-liked") === "true";
 
     if (isLiked) {
-      cardUnlick.src = "./image/unlike.png"; // Alteração da imagem para "não curtir"
+      cardUnlick.src = unlikeImage; // Alteração da imagem para "não curtir"
       cardUnlick.setAttribute("data-liked", "false");
     } else {
-      cardUnlick.src = "./image/liked.png"; // Alteração da imagem para "curtir"
+      cardUnlick.src = likedImage; // Alteração da imagem para "curtir"
       cardUnlick.setAttribute("data-liked", "true");
     }
   }
