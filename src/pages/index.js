@@ -6,14 +6,12 @@ import {
   addFormFirst, 
   addSubmit, 
   editForm, 
-  submitForm, 
   inputNome, 
   inputJob, 
+  submitForm,
   popupImage, 
   addInputName, 
   addInputImage, 
-  profileTitle, 
-  profileSubtitle, 
   profileButton, 
   addButton, 
   popupCardForm,
@@ -33,6 +31,10 @@ import {
 import FormValidator from "./FormValidator.js";
 import Card from "./Card.js";
 import { Section } from '../components/Section.js';
+import { PopupWithForm } from '../components/PopupWithForm.js';
+import { UserInfo } from '../components/UserInfo.js';
+import Popup from '../components/Popup.js';
+
 
 
 
@@ -43,7 +45,7 @@ new FormValidator(addFormFirst, addSubmit, configFormValidate, configSpanValidat
 new FormValidator(editForm, submitForm, configFormValidate, configSpanValidate).enableValidation()
 
 
-// Renderização dos Cards na tela quando iniciar 
+// RENDERIZAR OS CARDS NA TELA QUANDO A APLICAÇÃO CARREGAR
 const cardList = new Section(
   {
     data: initialCards,
@@ -57,3 +59,24 @@ const cardList = new Section(
 );
 cardList.renderItems();
 
+// NOVA INSTACIA DAS INFORMAÇÕES DE USUARIO
+const newInfoUser = new UserInfo(".profile__title", ".profile__subtitle")
+
+
+
+const popupFormEdit = new PopupWithForm("#popup-user-form", (evt) => {
+  newInfoUser.setUserInfo(  inputNome, inputJob )
+},
+".popup__form-edit"
+) 
+popupFormEdit.setEventListeners()
+
+
+
+// EVENTO DE CLICK PARA O POPUP ABRIR   
+profileButton.addEventListener("click", () => {
+  const {name, job } = newInfoUser.getUserInfo()
+  inputNome.value = name
+  inputJob.value = job
+  popupFormEdit.open()
+})
