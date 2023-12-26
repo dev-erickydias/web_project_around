@@ -10,7 +10,7 @@ export class UserInfo {
         }
     }
     setUserInfo(name, job) {
-        this._nameElement.textContent = name.value
-        this._jobElement.textContent = job.value
+        this._nameElement.textContent = name
+        this._jobElement.textContent = job
     }
 }
