@@ -51,7 +51,7 @@
     <div class="popup" id="popup-user-form">
       <div class="overlay"></div>
 
-      <form class="popup__form-edit ">
+      <form class="popup__form-edit">
         <div class="popup__form-itens">
           <div class="popup__form-close">
             <img src="<%= require('./image/Close__Icon.png')%>" alt="Botão que feixa a caixa de edição">
@@ -85,12 +85,12 @@
 
 
           <div class="popup__form-inputs">
-            <input type="text" required minlength="2" value="" name="nome" id="input__title" class="popup__form-input popup__form-name add-title " maxlength="41" placeholder="Titulo">
+            <input type="text" required minlength="2" value="" name="name" id="input__title" class="popup__form-input popup__form-name add-title " maxlength="41" placeholder="Titulo">
             <span class="popup__form" id="span-input-add-name"></span>
           </div>
 
           <div class="popup__form-inputs">
-            <input required name="image" minlength="1" value="" id="input__image" class="popup__form-input popup__form-job add-image" type="url" placeholder="Link de imagem">
+            <input required name="link" minlength="1" value="" id="input__image" class="popup__form-input popup__form-job add-image" type="url" placeholder="Link de imagem">
             <span class="popup__form" id="span-input-add-image"></span>
           </div>
 
@@ -115,7 +115,7 @@
       <img class="del opacursor" src="<%= require('./image/lixeira.png')%>" alt="icone de lixeira">
       <img class="card__image">
       <h2 class="card__title"></h2>   
-        <img class="card__unlick unlike" data-liked="false" src="<%= require('./image/unlike.png')%>" alt="lick">
+        <img class="card__unlick unlike" src="<%= require('./image/unlike.png')%>" data-liked="false"  alt="lick">
     </li>
   </template>
 
