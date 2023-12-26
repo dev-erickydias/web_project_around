@@ -3,7 +3,7 @@
   z-index: 999;
   visibility: visible;
 }
-.popup_opened .popup__image--card__image {
+.popup_opened .popup__image--card {
   width: 433px;
   height: 540px;
   max-height: 75vh;
