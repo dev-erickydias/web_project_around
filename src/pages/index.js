@@ -75,7 +75,6 @@ profileButton.addEventListener("click", () => {
 const addPopupCard = new PopupWithForm("#popup-card-form", (item) => {
   const card = new Card(item, '#template', (image, title) => {
     const popupImageInt = new PopupWithImage(".popup-container__image", ".popup__container-name", "#popupcard")
-    console.log(image, title)
     popupImageInt.open(image, title)
   });
   const cardElement = card.generateCard();

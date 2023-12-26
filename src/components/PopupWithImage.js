@@ -21,7 +21,6 @@ export class PopupWithImage extends Popup {
     }
 
     open(imageUrl, caption) {
-        console.log(imageUrl)
         this._imageElement.src = imageUrl;
         this._imageElement.alt = "Image of " + caption;
         this._captionElement.textContent = caption;
