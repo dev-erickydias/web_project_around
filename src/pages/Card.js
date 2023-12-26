@@ -1,7 +1,7 @@
 import unlikeImage from "../image/unlike.png"
 import likedImage from "../image/liked.png"
 export default class Card {
-  constructor(data, cardSelector, handleImagePopup,) {
+  constructor(data, cardSelector, handleImagePopup) {
     this._card = document.querySelector(cardSelector)
     this._title = data.name;
     this._image = data.link;
@@ -36,7 +36,8 @@ export default class Card {
 
   _setEventListeners() {
     this._element.querySelector(".card__image").addEventListener("click", () => {
-      this._abrirPopupComImage(this._image);
+      this._abrirPopupComImage(this._image, this._title);
+      
     });
     this._element.querySelector(".card__unlick").addEventListener("click", (event) => {
       this._lickImage(event)
@@ -44,6 +45,7 @@ export default class Card {
     this._element.querySelector(".del").addEventListener("click", (event) => {
       this._deleteCard(event)
     });
+    
   }
   
   setCard(){

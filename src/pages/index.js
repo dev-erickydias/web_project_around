@@ -33,6 +33,7 @@ import Card from "./Card.js";
 import { Section } from '../components/Section.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
+import { PopupWithImage } from '../components/PopupWithImage.js';
 
 
 // validações dos Formularios
@@ -41,13 +42,18 @@ const configSpanValidate = { spanErrorClass: "form__error_active" }
 new FormValidator(addFormFirst, addSubmit, configFormValidate, configSpanValidate).enableValidation()
 new FormValidator(editForm, submitForm, configFormValidate, configSpanValidate).enableValidation()
 
+const popupImageInt = new PopupWithImage(".popup-container__image", ".popup__container-name", "#popupcard")
+
 
 // RENDERIZAR OS CARDS NA TELA QUANDO A APLICAÇÃO CARREGAR
 const cardList = new Section(
   {
     data: initialCards,
     renderer: (item) => {
-      const card = new Card(item, '#template', 'openPopupWithImage');
+      const card = new Card(item, '#template', (image, title) => {
+        popupImageInt.open(image, title)
+        popupImageInt.setEventListeners()
+      });
       return card.generateCard();
     },
   },
@@ -77,8 +83,13 @@ profileButton.addEventListener("click", () => {
 })
 
 
+
 const addPopupCard = new PopupWithForm("#popup-card-form", (item) => {
-  const card = new Card(item, '#template', 'openPopupWithImage');
+  const card = new Card(item, '#template', (image, title) => {
+    const popupImageInt = new PopupWithImage(".popup-container__image", ".popup__container-name", "#popupcard")
+    console.log(image, title)
+    popupImageInt.open(image, title)
+  });
   const cardElement = card.generateCard();
 
   cardList.setElement(cardElement)
@@ -91,3 +102,5 @@ addButton.addEventListener("click", () => {
 addPopupCard.reset()
  addPopupCard.open() 
 })
+
+

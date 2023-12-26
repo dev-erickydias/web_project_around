@@ -46,7 +46,7 @@
     </ul>
 
 
-    <div class="popup-image"></div>
+    <div class="popup-image"></div> 
     <!-- formulario de edicao do perfil -->
     <div class="popup" id="popup-user-form">
       <div class="overlay"></div>
@@ -101,10 +101,12 @@
     <div class="popup" id="popupcard"> 
       <div class="overlay" id="overlay-image"></div>
       <div class="popup-container">
-        <img class="popup-container__image card__image" id="popup-image" src="<%= require('./image/close__Icon_hover.png')%>" alt="">
+        <div class="popup__image">
+          <img class="popup-container__image card__image" id="popup-image" src="<%= require('./image/close__Icon_hover.png')%>" alt="">
+          <span class="popup__container-name"></span>
+        </div>
         <div class="close-image">
           <img src="<%= require('./image/Close__Icon.png')%>" alt="Botão que feixa a caixa de edição">
-          <p class="image__container-name"></p>
         </div>
       </div>
     </div>
