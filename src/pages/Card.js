@@ -13,7 +13,7 @@ export default class Card {
     return cardElement;
   }
 
-  _lickImage(event) {
+  _likeImage(event) {
     if (event.target.classList.contains("card__unlick")) {
       const cardUnlick = event.target;
       const isLiked = cardUnlick.getAttribute("data-liked") === "true";
@@ -40,16 +40,11 @@ export default class Card {
       
     });
     this._element.querySelector(".card__unlick").addEventListener("click", (event) => {
-      this._lickImage(event)
+      this._likeImage(event)
     })
     this._element.querySelector(".del").addEventListener("click", (event) => {
       this._deleteCard(event)
     });
-    
-  }
-  
-  setCard(){
-    const card = this.generateCard()
     
   }
 

@@ -4,7 +4,6 @@ export default class FormValidator {
     this.submitButton = submitButton;
     this.formElement = formElement;
     this.inputList = Array.from(formElement.querySelectorAll('input'));
-    this.spanList = Array.from(formElement.querySelectorAll('span'));
   }
   _checkInputValidity(inputElement) {
     const isValid = inputElement.validity.valid;
