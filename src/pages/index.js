@@ -80,3 +80,18 @@ profileButton.addEventListener("click", () => {
   inputJob.value = job
   popupFormEdit.open()
 })
+
+const addPopupCard = new PopupWithForm("#popup-card-form", (item) => {
+  const card = new Card(item, '#template', 'openPopupWithImage');
+  const cardElement = card.generateCard();
+
+  cardList.setElement(cardElement)
+},
+  "#first"
+) 
+addPopupCard.setEventListeners()
+
+addButton.addEventListener("click", () => {
+addPopupCard.reset()
+ addPopupCard.open() 
+})
