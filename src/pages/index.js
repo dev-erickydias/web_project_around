@@ -9,20 +9,8 @@ import {
   inputNome,
   inputJob,
   submitForm,
-popupImage, 
-  addInputName,
-  addInputImage,
-  profileButton,
-  addButton,
-  popupCardForm,
-  popupUserForm,
-  formClose,
-  addClose,
-  overlay,
-  overlayAdd,
-  overlayImage,
-  imgClose
-} from "../utils/constants.js"
+profileButton,
+  addButton} from "../utils/constants.js"
 
 
 
