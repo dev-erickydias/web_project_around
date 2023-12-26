@@ -9,8 +9,9 @@ import {
   inputNome,
   inputJob,
   submitForm,
-profileButton,
-  addButton} from "../utils/constants.js"
+  profileButton,
+  addButton
+} from "../utils/constants.js"
 
 
 
@@ -55,16 +56,16 @@ const newInfoUser = new UserInfo(".profile__title", ".profile__subtitle")
 
 
 const popupFormEdit = new PopupWithForm("#popup-user-form", ({ nome, job }) => {
-  newInfoUser.setUserInfo(  nome, job )
+  newInfoUser.setUserInfo(nome, job)
 },
-".popup__form-edit"
-) 
+  ".popup__form-edit"
+)
 popupFormEdit.setEventListeners()
 
 
 // EVENTO DE CLICK NO  BUTTON PARA O POPUP ABRIR   
 profileButton.addEventListener("click", () => {
-  const {name, job } = newInfoUser.getUserInfo()
+  const { name, job } = newInfoUser.getUserInfo()
   inputNome.value = name
   inputJob.value = job
   popupFormEdit.open()
@@ -82,12 +83,12 @@ const addPopupCard = new PopupWithForm("#popup-card-form", (item) => {
   cardList.setElement(cardElement)
 },
   "#first"
-) 
+)
 addPopupCard.setEventListeners()
 
 addButton.addEventListener("click", () => {
-addPopupCard.reset()
- addPopupCard.open() 
+  addPopupCard.reset()
+  addPopupCard.open()
 })
 
 
