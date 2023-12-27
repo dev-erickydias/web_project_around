@@ -1,16 +1,28 @@
-# Projeto 5:  EUA Afora
+<h1 align=center> Projeto 5:  EUA Afora<h1>
 
-### Visão geral
+<h3> Visão geral<h3>
+
 
 * Figma
 * Imagens
 * Java Script
+* Orientação a Objeto
+* Webpack
 * HTML
 * CSS
+
+
+<br>
+<br>
+<br>
 
 **Figma**
 
 * [Link para o projeto no Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt)
+
+<br>
+<br>
+
 
 **você poderá ver o Site [Aqui](https://dev-erickydias.github.io/web_project_4_ptbr/)**
 
