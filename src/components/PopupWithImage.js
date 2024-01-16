@@ -26,4 +26,4 @@ export class PopupWithImage extends Popup {
         this._captionElement.textContent = caption;
         super.open();
     }
-}
+} 
